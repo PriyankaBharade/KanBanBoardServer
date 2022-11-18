@@ -41,9 +41,13 @@ app.get("/api", (req, res) => {
     res.json(tasks);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server listening on ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server listening on ${PORT}`);
+// });
+
+app.listen(process.env.PORT || PORT, '0.0.0.0', () => {
+	console.log(`Server listening on ${PORT}`);
+  });
 
 const fetchID = () => Math.random().toString(36).substring(2, 10);
 
