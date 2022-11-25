@@ -118,7 +118,7 @@ io.on("connection", (socket) => {
         socket.emit("tasks", tasks);
     });
 })
-server.listen(4000, () => {
+server.listen(process.env.PORT || 4000, () => {
     console.log("SERVER RUNNING")
 })
 
