@@ -213,9 +213,9 @@ io.on('connection', (socket) => {
 });
 
 
-server.listen(4000, () => {
-    console.log('listening on *:4000');
-});
+  app.listen(process.env.PORT || 4000, () => {
+         console.log("SERVER RUNNING")
+     })
 
 const fetchID = () => Math.random().toString(36).substring(2, 10);
 
