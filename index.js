@@ -212,10 +212,9 @@ io.on('connection', (socket) => {
     });
 });
 
-
-  app.listen(process.env.PORT || 4000, () => {
-         console.log("SERVER RUNNING")
-     })
+server.listen(process.env.PORT || 4000, () => {
+    console.log('listening on *:4000');
+});
 
 const fetchID = () => Math.random().toString(36).substring(2, 10);
 
